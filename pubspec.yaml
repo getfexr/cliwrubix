@@ -1,0 +1,18 @@
+name: cliwrubix
+description: Setup multiple user wallets in a container instead of mobile wallets, for Rubix L1 protocol.
+version: 0.1.0
+# repository: https://github.com/getfexr/cliwrubix
+
+environment:
+  sdk: ^3.1.0-163.1.beta
+
+# Add regular dependencies here.
+dependencies:
+  # path: ^1.8.0
+
+dev_dependencies:
+  hive: ^2.2.3
+  args: ^2.3.1
+  lints: ^2.0.0
+  test: ^1.21.0
+  fexr: ^2.0.1-dev.1
