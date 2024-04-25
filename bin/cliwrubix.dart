@@ -11,7 +11,7 @@ Future<void> main(List<String> arguments) async {
     switch (arguments[0]) {
       case 'new':
         // cliwrubix.createRubixAddress();
-        print ('Creating DID for Rubix');
+        await cliwrubix.newDID();
         keepRunning = true;
         break;
       case 'sign':
@@ -19,7 +19,9 @@ Future<void> main(List<String> arguments) async {
           // cliwrubix.signTransaction(arguments[2], arguments[4], arguments[6], arguments[8]);
           if (arguments.length == 9 && arguments[1] == '-sender' && arguments[3] == '-receiver' && arguments[5] == '-nlsspriv' && arguments[7] == '-ecdsapriv') {
             //? dart run bin/cliwrubix.dart sign -sender sender.DID -receiver receiver.DID -nlsspriv NLSSIMGPATH -ecdsapriv ECDSASTRING
-            // print('Signing transaction for sender ${arguments[2]}, receiver ${arguments[4]}, NLSS private share ${arguments[6]}, ECDSA private key ${arguments[8]}');
+            await cliwrubix.signTransaction(
+                arguments[2], arguments[4], arguments[6], arguments[8]);
+
           } else {
             print('Invalid number of arguments or incorrect flags or their order used. \n Please use the correct format.\n');
           }
@@ -30,7 +32,7 @@ Future<void> main(List<String> arguments) async {
       case 'bal':
         if (arguments.length == 2) {
           // cliwrubix.checkBalance(arguments[1]);
-          print('Checking balance for DID ${arguments[1]}');
+          await cliwrubix.checkBalance(arguments[1]);
         } else {
           print('Invalid number of arguments');
         }

@@ -1,8 +1,10 @@
-To setup, run the following commands:
+To setup, create a .env file with the following variables:
 
 ```bash
-cliwrubix sky -url <pass the URL to access Sky in the remote VM>
+SKY=rubix1.fexr.club
 ```
+
+replace rubix1.fexr.club with the IP address of the VM hosting the Rubix and Sky executable.
 
 This executable can perform three tasks:
 

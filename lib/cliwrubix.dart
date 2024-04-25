@@ -1,5 +1,15 @@
-int calculate() {
-  return 6 * 7;
+Future<void> newDID() async {
+  print('Creating DID for Rubix');
+}
+
+Future<void> signTransaction(
+    String sender, String receiver, String nlsspriv, String ecdsapriv) async {
+      print(
+      'Signing transaction for sender $sender, receiver $receiver, NLSS private share $nlsspriv, ECDSA private key $ecdsapriv');
+    }
+
+Future<void> checkBalance(String did) async {
+  print('Checking balance for DID $did');
 }
 
 // Future<void> createRubixAddress() async {
