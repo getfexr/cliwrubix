@@ -3,12 +3,12 @@ import 'package:test/test.dart';
 
 void main() {
   test('new', () {
-    // expect(calculate(), 42);
+    // expect(newDID(), 42);
   });
   test('sign', () {
-    // expect(calculate(), 42);
+    // expect(signTransaction(), 42);
   });
   test('bal', () {
-    // expect(calculate(), 42);
+    // expect(checkBalance(), 42);
   });
 }
